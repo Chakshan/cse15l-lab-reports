@@ -10,7 +10,7 @@ Testing MarkDown
 
 [Link to home page](https://chakshan.github.io/cse15l-lab-reports/index.html)
 
-![Image](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Fbackground&psig=AOvVaw1zqpup9gpc12Xqvsi-XGx1&ust=1704999357666000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCMitn-G_04MDFQAAAAAdAAAAABAD)
+![Image](https://img.freepik.com/free-photo/space-background-realistic-starry-night-cosmos-shining-stars-milky-way-stardust-color-galaxy_1258-154643.jpg)
 
 > Blockquote
 
