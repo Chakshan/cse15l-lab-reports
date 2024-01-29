@@ -87,13 +87,13 @@ Absolute path of private key: `/Users/chakshan/.ssh/id_rsa`
 
 ![private key](images/private_key.png)
 
-Absolute path of public key: `.../.ssh/id_rsa.pub`
+Absolute path of public key on `ieng6`: `/home/linux/ieng6/oce/9f/ckothakota/.ssh/authorized_keys`
 
-![public key]()
+![public key](images/public_key.png)
 
 Remote login without password:
 
-![remote login]()
+![remote login no password](images/login_no_pwd.png)
 
 ## Part 3
 Prior the labs from week 2 and week 3, I did not know or understand much about the way URLs are structured and the way they worked. Now I understand most of the various components of a URL including its domain, port number, path, and query. While using them hands on through Github pages, the path structure made perfect sense. When using URLs in our custom server classes, I saw how port numbers were used and began to understand that queries could be used to customize the output of a webpage to the user's needs.
