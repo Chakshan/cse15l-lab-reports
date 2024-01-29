@@ -45,7 +45,7 @@ After starting the server and accessing the url `http://localhost:4000/add-messa
 ![url result 1](images/ss1.png)
 
 ##### Analysis
-Upon receiving the http request, the `handleRequest` method of the `Handler` class is called with a `new URL("http://localhost:4000/add-message?s=hello there&user=chakshan")` object being passed in as the parameter for `url`. 
+Upon receiving the http request, the `handleRequest` method of the `Handler` class is called with a `new URI("http://localhost:4000/add-message?s=hello there&user=chakshan")` object being passed in as the parameter for `url`. 
 
 The value of `url.getPath()` is `"/add-message"`. Thus the `else if` branch of the if-else ladder is run. 
 
@@ -67,7 +67,7 @@ After the first result, the following url was accesssed `http://localhost:4000/a
 ![url result 1](images/ss2.png)
 
 ##### Analysis
-Upon receiving the http request, the `handleRequest` method of the `Handler` class is called with a `new URL("http://localhost:4000/add-message?s=hey, how's it going?&user=me")` object being passed in as the parameter for `url`. 
+Upon receiving the http request, the `handleRequest` method of the `Handler` class is called with a `new URI("http://localhost:4000/add-message?s=hey, how's it going?&user=me")` object being passed in as the parameter for `url`. 
 
 The value of `url.getPath()` is `"/add-message"`. Thus the `else if` branch of the if-else ladder is run. 
 
