@@ -7,9 +7,9 @@
 static List<String> filter(List<String> list, StringChecker sc) {
     List<String> result = new ArrayList<>();
     for(String s: list) {
-      if(sc.checkString(s)) {
-        result.add(0, s);
-      }
+        if(sc.checkString(s)) {
+            result.add(0, s);
+        }
     }
     return result;
 }
@@ -18,50 +18,50 @@ static List<String> filter(List<String> list, StringChecker sc) {
 ### Failure Inducing Input
 ```
 public class StringContains implements StringChecker {
-	@Override
-	public boolean checkString(String s) {
-		return s.contains("a");
-	}
+    @Override
+    public boolean checkString(String s) {
+        return s.contains("a");
+    }
 }
-	
+    
 @Test
 public void testFilterMultipleMatch() {
-	ArrayList<String> input = new ArrayList<>();
-	input.add("a");
-	input.add("ab");
-	input.add("abc");
-	input.add("bcd");
+    ArrayList<String> input = new ArrayList<>();
+    input.add("a");
+    input.add("ab");
+    input.add("abc");
+    input.add("bcd");
 
-	ArrayList<String> expected = new ArrayList<>();
-	expected.add("a");
-	expected.add("ab");
-	expected.add("abc");
+    ArrayList<String> expected = new ArrayList<>();
+    expected.add("a");
+    expected.add("ab");
+    expected.add("abc");
 
-	StringContains contains = new StringContains();
-	List<String> output = ListExamples.filter(input, contains);
-	assertEquals(expected, output);
+    StringContains contains = new StringContains();
+    List<String> output = ListExamples.filter(input, contains);
+    assertEquals(expected, output);
 }
 ```
 
 ### Success Inducing Input
 ```
 public class StringContains implements StringChecker {
-	@Override
-	public boolean checkString(String s) {
-		return s.contains("a");
-	}
+    @Override
+    public boolean checkString(String s) {
+        return s.contains("a");
+    }
 }
 
 @Test
 public void testFilterSingleMatch() {
-	ArrayList<String> input = new ArrayList<>();
-	input.add("x");
-	input.add("y");
-	input.add("z");
-	input.add("abc");
+    ArrayList<String> input = new ArrayList<>();
+    input.add("x");
+    input.add("y");
+    input.add("z");
+    input.add("abc");
 
-	ArrayList<String> expected = new ArrayList<>();
-	expected.add("abc");
+    ArrayList<String> expected = new ArrayList<>();
+    expected.add("abc");
 }
 ```
 
@@ -76,9 +76,9 @@ Code Before
 static List<String> filter(List<String> list, StringChecker sc) {
     List<String> result = new ArrayList<>();
     for(String s: list) {
-      if(sc.checkString(s)) {
-        result.add(0, s);
-      }
+        if(sc.checkString(s)) {
+            result.add(0, s);
+        }
     }
     return result;
 }
@@ -89,9 +89,9 @@ Code After
 static List<String> filter(List<String> list, StringChecker sc) {
     List<String> result = new ArrayList<>();
     for(String s: list) {
-      if(sc.checkString(s)) {
-        result.add(s);
-      }
+        if(sc.checkString(s)) {
+            result.add(s);
+        }
     }
     return result;
 }
