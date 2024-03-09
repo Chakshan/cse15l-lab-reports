@@ -12,30 +12,30 @@ Here some details about code I wrote:
 File structure:
 ```
 code/
-	Sorter.java
-	SorterTests.java
-	test.sh
+    Sorter.java
+    SorterTests.java
+    test.sh
 lib/
-	hamcrest-core-1.3.jar
-	junit-4.13.2.jar
+    hamcrest-core-1.3.jar
+    junit-4.13.2.jar
 ```
 
 Bubble Sort Algorithm:
 ```
 public static void bubbleSort(int[] arr) {
-	for (int i = 0; i < arr.length; i++) {
-		for (int j = i; j < arr.length-1; j++) {
-			if (arr[j] > arr[j+1]) {
-				swap(arr, j, j+1);
-			}
-		}
-	}
+    for (int i = 0; i < arr.length; i++) {
+        for (int j = i; j < arr.length-1; j++) {
+            if (arr[j] > arr[j+1]) {
+                swap(arr, j, j+1);
+            }
+        }
+    }
 }
-	
+    
 public static void swap(int[] arr, int i, int j) {
-	int temp = arr[i];
-	arr[i] = arr[j];
-	arr[j] = temp;
+    int temp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = temp;
 }
 ```
 
@@ -43,10 +43,10 @@ JUnit Test:
 ```
 @Test
 public void testBubbleSort() {
-	int[] input = {3, 5, 6, 2, 1, 3, 5};
-	int[] expect = {1, 2, 3, 3, 5, 5, 6};
-	Sorter.bubbleSort(input);
-	assertArrayEquals(expect, input);
+    int[] input = {3, 5, 6, 2, 1, 3, 5};
+    int[] expect = {1, 2, 3, 3, 5, 5, 6};
+    Sorter.bubbleSort(input);
+    assertArrayEquals(expect, input);
 }
 ```
 
@@ -73,26 +73,26 @@ From your response and after investing the bubble sort algorithm, I realized tha
 Code Before:
 ```
 public static void bubbleSort(int[] arr) {
-	for (int i = 0; i < arr.length; i++) {
-		for (int j = i; j < arr.length-1; j++) {
-			if (arr[j] > arr[j+1]) {
-				swap(arr, j, j+1);
-			}
-		}
-	}
+    for (int i = 0; i < arr.length; i++) {
+        for (int j = i; j < arr.length-1; j++) {
+            if (arr[j] > arr[j+1]) {
+                swap(arr, j, j+1);
+            }
+        }
+    }
 }
 ```
 
 Code After:
 ```
 public static void bubbleSort(int[] arr) {
-	for (int i = 0; i < arr.length; i++) {
-		for (int j = 0; j < arr.length-i-1; j++) {
-			if (arr[j] > arr[j+1]) {
-				swap(arr, j, j+1);
-			}
-		}
-	}
+    for (int i = 0; i < arr.length; i++) {
+        for (int j = 0; j < arr.length-i-1; j++) {
+            if (arr[j] > arr[j+1]) {
+                swap(arr, j, j+1);
+            }
+        }
+    }
 }
 ```
 ## Part 2
